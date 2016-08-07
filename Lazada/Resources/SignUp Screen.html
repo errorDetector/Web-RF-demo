@@ -49,16 +49,399 @@ td.name, th.name {
 </head>
 <body>
 <h1>SignUp Screen</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td>Variables.html</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Variables</td>
+<td>../GUIMAP/SignUp.py</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 <table border="1" id="keyword">
 <tr>
 <th class="name" colspan="5">Keywords</th>
 </tr>
 <tr>
 <td class="name"><a name="keyword_Input Name">Input Name</a></td>
+<td>[Arguments]</td>
+<td>${name}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>${SignUp_NameTextField}</td>
+<td>${gl_time_out}</td>
+<td>Couldn't found Home Page - Login/Signup popup - Sign Up - Name Text Field</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Text </td>
+<td>${SignUp_NameTextField}</td>
+<td>${name}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Get A Random Email Alias">Get A Random Email Alias</a></td>
+<td>[Arguments]</td>
+<td>${email_address}</td>
+<td>${number_amount}=10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${address}</td>
+<td>${domain}</td>
+<td>Split String</td>
+<td>${email_address}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>@</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${random_numbers}=</td>
+<td>Generate Random String</td>
+<td>${number_amount}</td>
+<td>[NUMBERS]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${email_alias}=</td>
+<td>Catenate</td>
+<td>SEPARATOR=@</td>
+<td>${address}+${random_numbers}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${domain}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${email_alias}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Input Email Address">Input Email Address</a></td>
+<td>[Arguments]</td>
+<td>${username}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>${SignUp_EmailAddressTextField}</td>
+<td>${gl_time_out}</td>
+<td>Couldn't found Home Page - Login/Signup popup - Sign Up - Email Address text field</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Text </td>
+<td>${SignUp_EmailAddressTextField}</td>
+<td>${username}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Input Password">Input Password</a></td>
+<td>[Arguments]</td>
+<td>${password}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>${SignUp_PasswordTextField}</td>
+<td>${gl_time_out}</td>
+<td>Couldn't found Home Page - Login/Signup popup - Sign Up - Password text field</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Text </td>
+<td>${SignUp_PasswordTextField}</td>
+<td>${password}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Input Password Confirmation">Input Password Confirmation</a></td>
+<td>[Arguments]</td>
+<td>${password}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>${SignUp_RetypePasswordTextField}</td>
+<td>${gl_time_out}</td>
+<td>Couldn't found Home Page - Login/Signup popup - Sign Up - Password Confirmation text field</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Text </td>
+<td>${SignUp_RetypePasswordTextField}</td>
+<td>${password}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Select Birthday">Select Birthday</a></td>
+<td>[Arguments]</td>
+<td>${day}</td>
+<td>${month}</td>
+<td>${year}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>${SignUp_Birthday_Day}</td>
+<td>${gl_time_out}</td>
+<td>Couldn't found Home Page - Login/Signup popup - Sign Up - Birthday Day</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select From List By Value</td>
+<td>${SignUp_Birthday_Day}</td>
+<td>${day}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>${SignUp_Birthday_Month}</td>
+<td>${gl_time_out}</td>
+<td>Couldn't found Home Page - Login/Signup popup - Sign Up - Birthday Month</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select From List By Value</td>
+<td>${SignUp_Birthday_Month}</td>
+<td>${month}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>${SignUp_Birthday_Year}</td>
+<td>${gl_time_out}</td>
+<td>Couldn't found Home Page - Login/Signup popup - Sign Up - Birthday Year</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select From List By Value</td>
+<td>${SignUp_Birthday_Year}</td>
+<td>${year}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Select Gender">Select Gender</a></td>
+<td>[Arguments]</td>
+<td>${is_male}=True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>${SignUp_Gender_Male}</td>
+<td>${gl_time_out}</td>
+<td>Couldn't found Home Page - Login/Signup popup - Sign Up - Gender Male</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Wait Until Page Contains Element</td>
+<td>${SignUp_Gender_Female}</td>
+<td>${gl_time_out}</td>
+<td>Couldn't found Home Page - Login/Signup popup - Sign Up - Gender Female</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>${is_male}==True</td>
+<td>Click Element</td>
+<td>${SignUp_Gender_Male}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ELSE</td>
+<td>Click Element</td>
+<td>${SignUp_Gender_Female}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Click Submit Button">Click Submit Button</a></td>
+<td>Wait Until Page Contains Element</td>
+<td>${SignUp_SubmitButton}</td>
+<td>${gl_time_out}</td>
+<td>Couldn't found Home Page - Login/Signup popup - Sign Up - Submit button</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>${SignUp_SubmitButton}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Sign Up Successful">Sign Up Successful</a></td>
+<td>SignUp Screen.Input Name</td>
+<td>Automation Test</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${random_email}=</td>
+<td>Get A Random Email Alias</td>
+<td>testautomation_lazada@gmail.com</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>SignUp Screen.Input Email Address</td>
+<td>${random_email}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>SignUp Screen.Input Password</td>
+<td>123abc</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>SignUp Screen.Input Password Confirmation</td>
+<td>123abc</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>SignUp Screen.Select Birthday</td>
+<td>05</td>
+<td>05</td>
+<td>1985</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>SignUp Screen.Select Gender</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>SignUp Screen.Click Submit Button</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>SignUp Screen.Verify signup successful</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Verify signup successful">Verify signup successful</a></td>
+<td>Wait Until Page Contains</td>
+<td>Customer save success</td>
+<td>30s</td>
+<td>Signup failed!</td>
 </tr>
 </table>
 </body>
