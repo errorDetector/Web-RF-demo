@@ -6,9 +6,9 @@
 
 
 # Navigation bar - on top
-HomePage_LogInBtn = '//span[text()="Login"]'
-HomePage_SignUpBtn = '//span[text()="Signup"]'
-
+HomePage_Navigation_LogInBtn = '//span[text()="Login"]'
+HomePage_Navigation_SignUpBtn = '//span[text()="Signup"]'
+HomePage_Navigation_AccountInfomation = '//ul[@class="top-nav__list"]/li[@class="top-nav__item js-header-logged-in-account"]'
 
 
 HomePage_LogInSignUpPopup_Navigation_LogInTab = '//a[text()="Login"]'
